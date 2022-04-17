@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 
 namespace YandexPageObject.YandexPages
 {
@@ -12,11 +13,13 @@ namespace YandexPageObject.YandexPages
     {
         private WebDriver driver;
         public MailPage(WebDriver driver) { this.driver = driver;}
-        IWebElement userLabel => driver.FindElement(By.ClassName("username__first-letter"));
-        IWebElement lnkLogout => driver.FindElement(By.XPath("//span[contains(text(), 'Выйти')]"));
+        IWebElement userLabel => driver.FindElement(By.ClassName("desk-notif-card__title"));
+        IWebElement lnkLogout => driver.FindElement(By.CssSelector("a[aria-label='Выйти']"));
 
         public void Logout()
         {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            IWebElement labelDisplayed = wait.Until(e => e.FindElement(By.ClassName("desk-notif-card__title")));
             userLabel.Click();
             lnkLogout.Click();
         }

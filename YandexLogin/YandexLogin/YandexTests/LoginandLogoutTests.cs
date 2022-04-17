@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Threading;
@@ -23,15 +24,15 @@ namespace YandexPageObject.YandexTests
         {
             var homePage = new HomePage(driver);
             var loginPage = new LoginPage(driver);
-            var mailPage = new MailPage(driver);
 
             homePage.ClickLogin();
             loginPage.InputUsernameAndPassword();
             loginPage.ClickLogin();
+            loginPage.MakeScreenshot();
 
             var userLabelDisplayed = driver.FindElement(By.ClassName("desk-notif-card__title")).Text;
-            var userLoggedInLabel = "mastermister567";
-            Assert.AreEqual(userLabelDisplayed, userLoggedInLabel, "User Label doesn't match.");
+            var userLoggedInLabel = "mastermister123";
+            Assert.AreEqual(userLabelDisplayed, userLoggedInLabel, "User Label doesn't match."); 
         }
 
         [Test]
@@ -45,6 +46,7 @@ namespace YandexPageObject.YandexTests
             loginPage.InputUsernameAndPassword();
             loginPage.ClickLogin();
             mailPage.Logout();
+
 
             var actualpageTitle = driver.Title;
             string expectedPageTitle = "Яндекс";
