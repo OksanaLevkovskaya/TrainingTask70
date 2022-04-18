@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YandexPageObject", "YandexLogin\YandexPageObject.csproj", "{295F9E1A-746A-40DE-ACC2-B4E475547905}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{295F9E1A-746A-40DE-ACC2-B4E475547905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{295F9E1A-746A-40DE-ACC2-B4E475547905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{295F9E1A-746A-40DE-ACC2-B4E475547905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{295F9E1A-746A-40DE-ACC2-B4E475547905}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FF1B5C2-52F9-4B2E-B7D4-CA285DC32151}
+	EndGlobalSection
+EndGlobal
