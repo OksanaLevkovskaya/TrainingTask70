@@ -13,15 +13,15 @@ namespace YandexPageObject.YandexPages
     {
         private WebDriver driver;
         public MailPage(WebDriver driver) { this.driver = driver;}
-        IWebElement userLabel => driver.FindElement(By.ClassName("desk-notif-card__title"));
-        IWebElement lnkLogout => driver.FindElement(By.CssSelector("a[aria-label='Выйти']"));
+        IWebElement UserLabel => driver.FindElement(By.ClassName("desk-notif-card__title"));
+        IWebElement LnkLogout => driver.FindElement(By.CssSelector("a[aria-label='Выйти']"));
 
         public void Logout()
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            IWebElement labelDisplayed = wait.Until(e => e.FindElement(By.ClassName("desk-notif-card__title")));
-            userLabel.Click();
-            lnkLogout.Click();
+            IWebElement LabelDisplayed = wait.Until(e => e.FindElement(By.ClassName("desk-notif-card__title")));
+            UserLabel.Click();
+            LnkLogout.Click();
         }
     }
 } 

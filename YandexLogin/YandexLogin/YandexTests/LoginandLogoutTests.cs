@@ -26,7 +26,7 @@ namespace YandexPageObject.YandexTests
             var loginPage = new LoginPage(driver);
 
             homePage.ClickLogin();
-            loginPage.InputUsernameAndPassword();
+            loginPage.InputUsernameAndPassword("mastermister123", "mastermister1231");
             loginPage.ClickLogin();
             loginPage.MakeScreenshot();
 
@@ -43,7 +43,7 @@ namespace YandexPageObject.YandexTests
             var mailPage = new MailPage(driver);
 
             homePage.ClickLogin();
-            loginPage.InputUsernameAndPassword();
+            loginPage.InputUsernameAndPassword("mastermister123", "mastermister1231");
             loginPage.ClickLogin();
             mailPage.Logout();
 

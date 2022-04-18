@@ -12,8 +12,8 @@ namespace YandexPageObject.YandexPages
     {
         private WebDriver driver;
         public HomePage(WebDriver driver) { this.driver = driver; }
-        IWebElement lnkToLogin => driver.FindElement(By.ClassName("desk-notif-card__login-new-item-title"));
+        IWebElement LnkToLogin => driver.FindElement(By.ClassName("desk-notif-card__login-new-item-title"));
         
-        public void ClickLogin() => lnkToLogin.Click();
+        public void ClickLogin() => LnkToLogin.Click();
     }
 }
